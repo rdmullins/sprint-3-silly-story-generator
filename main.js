@@ -24,6 +24,10 @@ let xItem = randomValueFromArray(insertX);
 let yItem = randomValueFromArray(insertY);
 let zItem = randomValueFromArray(insertZ);
 
+newStory = newStory.replace(/:insertx:/g, xItem);
+newStory = newStory.replace(":inserty:", yItem);
+newStory = newStory.replace(":insertz:", zItem);
+
 function randomValueFromArray(array){
   const random = Math.floor(Math.random()*array.length);
   return array[random];
@@ -35,7 +39,7 @@ function result() {
 
   if(customName.value !== '') {
     const name = customName.value;
-
+    newStory = newStory.replace("Bob", name);
   }
 
   if(document.getElementById("uk").checked) {
