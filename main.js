@@ -1,3 +1,7 @@
+//  Awesome Inc. Bootcamp Sprint 3
+//  Silly Story Generator
+//  by Roger Mullins - Team DaVinci
+
 const customName = document.getElementById('customname');
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
