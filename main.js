@@ -14,7 +14,7 @@ let insertX = [
     "Big Daddy",
     "Father Christmas"];
     
-let insertPicx = [
+let insertPicX = [
     "Willy-The-Goblin.png",
     "CartoonBigDaddy.png",
     "CartoonFatherChristmas.png"
@@ -25,16 +25,28 @@ let insertY = [
     "Disneyland",
     "the White House"];
 
+let insertPicY = [
+    "CartoonSoupKitchen.png",
+    "CartoonDisneyland.png",
+    "CartoonWhiteHouse.png"
+];
+
 let insertZ = [
     "spontaneously combusted",
     "melted into a puddle on the sidewalk",
     "turned into a slug and crawled away"];
 
+let insertPicZ = [
+    "CartoonSpontaneousCombustion.png",
+    "CartoonMeltedIntoAPuddle.png",
+    "CartoonTurnedIntoASlug.png"
+];
+
 let xItem = randomValueFromArray(insertX);
 let yItem = randomValueFromArray(insertY);
 let zItem = randomValueFromArray(insertZ);
 
-let xPicture = randomValueFromArray(insertPicx);
+let xPicture = randomValueFromArray(insertPicX);
 
 newStory = newStory.replace(/:insertx:/g, xItem);
 newStory = newStory.replace(":inserty:", yItem);
@@ -64,7 +76,7 @@ function result() {
   story.textContent = newStory;
   story.style.visibility = 'visible';
 
-  let pictureBox = document.getElementById("image");
+  let pictureBox = document.getElementById("imageX");
   let pictureX = document.createElement('img');
   pictureX.src = ("../img/" + xPicture);
   pictureBox.appendChild(pictureX);
