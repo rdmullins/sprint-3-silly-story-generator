@@ -13,6 +13,12 @@ let insertX = [
     "Willy the Goblin",
     "Big Daddy",
     "Father Christmas"];
+    
+let insertPicx = [
+    "Willy-The-Goblin.png",
+    "CartoonBigDaddy.png",
+    "CartoonFatherChristmas.png"
+];
 
 let insertY = [
     "the soup kitchen",
@@ -27,6 +33,8 @@ let insertZ = [
 let xItem = randomValueFromArray(insertX);
 let yItem = randomValueFromArray(insertY);
 let zItem = randomValueFromArray(insertZ);
+
+let xPicture = randomValueFromArray(insertPicx);
 
 newStory = newStory.replace(/:insertx:/g, xItem);
 newStory = newStory.replace(":inserty:", yItem);
@@ -55,4 +63,9 @@ function result() {
 
   story.textContent = newStory;
   story.style.visibility = 'visible';
+
+  let pictureBox = document.getElementById("image");
+  let pictureX = document.createElement('img');
+  pictureX.src = ("../img/" + xPicture);
+  pictureBox.appendChild(pictureX);
 }
