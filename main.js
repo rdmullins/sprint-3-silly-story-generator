@@ -50,9 +50,9 @@ let insertPicZ = [
 // let yPicture = randomValueFromArray(insertPicY);
 // let zPicture = randomValueFromArray(insertPicZ);
 
-x = randomValue0To2();
-y = randomValue0To2();
-z = randomValue0To2();
+x = randomValue();
+y = randomValue();
+z = randomValue();
 
 let xItem = insertX[x];
 let yItem = insertY[y];
@@ -70,7 +70,7 @@ newStory = newStory.replace(":insertz:", zItem);
 //   return array[random];
 // }
 
-function randomValue0To2() {
+function randomValue() {
   const random = Math.floor(Math.random()*3);
   console.log(random);
   return random;
