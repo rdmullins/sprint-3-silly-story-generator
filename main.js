@@ -17,8 +17,7 @@ let insertX = [
 let insertPicX = [
     "Willy-The-Goblin.png",
     "CartoonBigDaddy.png",
-    "CartoonFatherChristmas.png"
-];
+    "CartoonFatherChristmas.png"];
 
 let insertY = [
     "the soup kitchen",
@@ -28,8 +27,7 @@ let insertY = [
 let insertPicY = [
     "CartoonSoupKitchen.png",
     "CartoonDisneyland.png",
-    "CartoonWhiteHouse.png"
-];
+    "CartoonWhiteHouse.png"];
 
 let insertZ = [
     "spontaneously combusted",
@@ -42,21 +40,40 @@ let insertPicZ = [
     "CartoonTurnedIntoASlug.png"
 ];
 
-let xItem = randomValueFromArray(insertX);
-let yItem = randomValueFromArray(insertY);
-let zItem = randomValueFromArray(insertZ);
 
-let xPicture = randomValueFromArray(insertPicX);
-let yPicture = randomValueFromArray(insertPicY);
-let zPicture = randomValueFromArray(insertPicZ);
+
+// let xItem = randomValueFromArray(insertX);
+// let yItem = randomValueFromArray(insertY);
+// let zItem = randomValueFromArray(insertZ);
+
+// let xPicture = randomValueFromArray(insertPicX);
+// let yPicture = randomValueFromArray(insertPicY);
+// let zPicture = randomValueFromArray(insertPicZ);
+
+x = randomValue0To2();
+y = randomValue0To2();
+z = randomValue0To2();
+
+let xItem = insertX[x];
+let yItem = insertY[y];
+let zItem = insertZ[z];
+let xPicture = insertPicX[x];
+let yPicture = insertPicY[y];
+let zPicture = insertPicZ[z];
 
 newStory = newStory.replace(/:insertx:/g, xItem);
 newStory = newStory.replace(":inserty:", yItem);
 newStory = newStory.replace(":insertz:", zItem);
 
-function randomValueFromArray(array){
-  const random = Math.floor(Math.random()*array.length);
-  return array[random];
+// function randomValueFromArray(array) {
+//   const random = Math.floor(Math.random()*array.length);
+//   return array[random];
+// }
+
+function randomValue0To2() {
+  const random = Math.floor(Math.random()*3);
+  console.log(random);
+  return random;
 }
 
 randomize.addEventListener('click', result);
@@ -73,6 +90,10 @@ function result() {
     const temperature = (Math.round((94-32)*5/9) + " centigrade");
     newStory = newStory.replace("94 fahrenheit", temperature);
     newStory = newStory.replace("300 pounds", weight);
+    if (yItem == "the White House") {
+      newStory = newStory.replace("the White House", "No. 10 Downing Street");
+      yPicture = "cartoonNo10Downing.jpg";
+    }
   }
 
   story.textContent = newStory;
