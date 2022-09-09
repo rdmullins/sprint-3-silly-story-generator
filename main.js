@@ -47,6 +47,8 @@ let yItem = randomValueFromArray(insertY);
 let zItem = randomValueFromArray(insertZ);
 
 let xPicture = randomValueFromArray(insertPicX);
+let yPicture = randomValueFromArray(insertPicY);
+let zPicture = randomValueFromArray(insertPicZ);
 
 newStory = newStory.replace(/:insertx:/g, xItem);
 newStory = newStory.replace(":inserty:", yItem);
@@ -76,8 +78,18 @@ function result() {
   story.textContent = newStory;
   story.style.visibility = 'visible';
 
-  let pictureBox = document.getElementById("imageX");
+  let pictureBoxX = document.getElementById("imageX");
   let pictureX = document.createElement('img');
   pictureX.src = ("../img/" + xPicture);
-  pictureBox.appendChild(pictureX);
+  pictureBoxX.appendChild(pictureX);
+
+  let pictureBoxY = document.getElementById("imageY");
+  let pictureY = document.createElement('img');
+  pictureY.src = ("../img/" + yPicture);
+  pictureBoxY.appendChild(pictureY);
+
+  let pictureBoxZ = document.getElementById("imageZ");
+  let pictureZ = document.createElement('img');
+  pictureZ.src = ("../img/" + zPicture);
+  pictureBoxZ.appendChild(pictureZ);
 }
