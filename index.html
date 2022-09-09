@@ -28,10 +28,22 @@
     }
 
     p {
+      width: 300px;
       background: #FFC125;
       color: #5E2612;
       padding: 10px;
       visibility: hidden;
+    }
+
+    img {
+      max-width: 99px;
+      height: auto;
+    }
+
+    .container div {
+        width: 100px;
+        display: inline-block;
+        padding: 0px;
     }
 
     </style>
@@ -51,8 +63,12 @@
     </div>
     <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
     <p class="story"></p>
-    <p><div id="image"></div></p>
     
+    <div class="container">
+      <div id="imageX"></div>
+      <div id="imageY"></div>
+      <div id="imageZ"></div>
+    </div>
 
     <script src="main.js"></script>
   </body>
