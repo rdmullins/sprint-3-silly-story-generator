@@ -72,7 +72,7 @@ newStory = newStory.replace(":insertz:", zItem);
 
 function randomValue() {
   const random = Math.floor(Math.random()*3);
-  console.log(random);
+  // console.log(random);
   return random;
 }
 
