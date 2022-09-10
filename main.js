@@ -96,6 +96,8 @@ function result() {
     }
   }
 
+  /* Easter Egg */
+
   if(customName.value == "Jeff") {
     story.classList.add("jeff");
   }
